@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,16 +67,49 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lEc-y7-gZg"/>
                     <connections>
                         <outlet property="accountInput" destination="SJJ-nO-bdo" id="n0h-32-08i"/>
                         <outlet property="logoShow" destination="eWn-H3-4VW" id="BlV-yU-NgU"/>
                         <outlet property="messageShow" destination="DKc-ud-vkz" id="cNy-sN-kLr"/>
                         <outlet property="passwordInput" destination="abY-oH-S7H" id="4Vy-uT-2Qf"/>
+                        <segue destination="IbP-w5-fvk" kind="show" identifier="toPage2" id="TmB-fT-m0r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-452" y="-28"/>
+            <point key="canvasLocation" x="1247.2" y="-28.335832083958024"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="oun-s0-tft">
+            <objects>
+                <viewController id="IbP-w5-fvk" customClass="MainViewController" customModule="SwiftGirls_LoginDemo_20180609" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u4R-EJ-Zfv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_SwiftGirls" translatesAutoresizingMaskIntoConstraints="NO" id="dYc-XI-cQC">
+                                <rect key="frame" x="67" y="68" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dYc-XI-cQC" secondAttribute="height" multiplier="15:8" id="Dot-pI-dMI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dYc-XI-cQC" firstAttribute="leading" secondItem="hQb-xt-ayx" secondAttribute="leading" constant="67" id="KvJ-zo-4BP"/>
+                            <constraint firstItem="dYc-XI-cQC" firstAttribute="top" secondItem="hQb-xt-ayx" secondAttribute="top" constant="48" id="Ofb-6F-gqi"/>
+                            <constraint firstItem="hQb-xt-ayx" firstAttribute="trailing" secondItem="dYc-XI-cQC" secondAttribute="trailing" constant="68" id="zEZ-Ez-naj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hQb-xt-ayx"/>
+                    </view>
+                    <connections>
+                        <outlet property="logoShow" destination="dYc-XI-cQC" id="euM-Rq-TAH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fm1-h7-zrp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988" y="-28.335832083958024"/>
         </scene>
     </scenes>
     <resources>
